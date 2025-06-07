@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookWise Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BookWise</div>
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="all-books.html">Books</a>
+            <a href="authors.html">Authors</a>
+            <a href="genres.html">Genres</a>
+        </nav>
+        <div class="search-bar-container">
+             <!-- <input type="search" placeholder="Search books..." id="globalSearchInput"> -->
+             <!-- Global search might be better placed on specific list pages -->
+        </div>
+        <div class="user-profile">
+            <!-- Add notification icon and user avatar image here if desired -->
+            <!-- For simplicity, I'll omit the actual image src for now -->
+            <img src="assets/default-avatar.png" alt="User Profile">
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, Sarah! Here's an overview of your library.</p>
+                </div>
+                <a href="add-book.html" class="btn btn-primary">Add New Book</a>
+            </div>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Books</h3>
+                    <div class="count total-books-count" id="totalBooksCount">...</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Available Books</h3>
+                    <div class="count available-books-count" id="availableBooksCount">...</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Authors</h3>
+                    <div class="count authors-count" id="authorsCount">...</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Genres</h3>
+                    <div class="count genres-count" id="genresCount">...</div>
+                </div>
+            </section>
+
+            <section class="quick-finder">
+                <h2>Quick Book Finder</h2>
+                <input type="search" id="quickBookSearch" placeholder="Search by title, author, or ISBN...">
+            </section>
+
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="actions-grid">
+                    <a href="all-books.html" class="action-card" style="text-decoration: none; color: inherit;">
+                        <h4>Browse All Books</h4>
+                        <p>View and manage your book collection.</p>
+                    </a>
+                    <a href="authors.html" class="action-card" style="text-decoration: none; color: inherit;">
+                        <h4>Manage Authors</h4>
+                        <p>View and edit author details.</p>
+                    </a>
+                    <a href="genres.html" class="action-card" style="text-decoration: none; color: inherit;">
+                        <h4>Manage Genres</h4>
+                        <p>Organize books by categories.</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 BookWise. All rights reserved.
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html> 

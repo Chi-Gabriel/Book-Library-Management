@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Book - BookWise</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/view-details.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BookWise</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="all-books.html" class="active">Books</a>
+            <a href="authors.html">Authors</a>
+            <a href="genres.html">Genres</a>
+        </nav>
+        <div class="user-profile">
+            <img src="assets/default-avatar.png" alt="User Profile">
+        </div>
+    </header>
+
+    <main>
+        <div class="container details-container">
+            <div id="bookDetailsLoading" style="text-align: center; padding: 20px;">Loading book details...</div>
+            <div id="bookDetailsError" class="form-message error" style="display: none; margin-bottom:20px;"></div>
+
+            <div id="bookDetailsContent" style="display: none;">
+                <div class="page-header breadcrumbs-and-actions">
+                     <div class="breadcrumbs">
+                        <a href="all-books.html">Books</a> &raquo; <span id="breadcrumbBookTitle">Book Title</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" id="editBookBtn" class="btn btn-secondary">Edit</a>
+                        <button id="deleteBookBtn" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+
+                <h1 id="bookTitle"></h1>
+                <p class="book-author">By <span id="bookAuthor"></span></p>
+
+                <div class="details-grid">
+                    <div>
+                        <strong>ISBN:</strong>
+                        <p id="bookISBN"></p>
+                    </div>
+                    <div>
+                        <strong>Genre:</strong>
+                        <p id="bookGenre"></p>
+                    </div>
+                    <div>
+                        <strong>Publication Year:</strong>
+                        <p id="bookPublicationYear"></p>
+                    </div>
+                     <div>
+                        <strong>Availability:</strong>
+                        <p id="bookAvailability" class="availability-tag-details"></p>
+                    </div>
+                </div>
+
+                <div class="description-section">
+                    <strong>Description:</strong>
+                    <p id="bookDescription"></p>
+                </div>
+            </div>
+             <a href="all-books.html" style="display: block; margin-top: 20px;">&laquo; Back to All Books</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 BookWise. All rights reserved.
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/viewBook.js"></script>
+</body>
+</html> 

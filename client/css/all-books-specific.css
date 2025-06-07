@@ -1,0 +1,143 @@
+.page-container {
+    max-width: 1400px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.filters-and-search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f9fafb;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.filters-and-search input[type="search"] {
+    flex-grow: 1;
+    min-width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-group, .sort-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filters-and-search select, .filters-and-search label {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.filters-and-search label {
+    border: none;
+    background-color: transparent;
+    padding-right: 0;
+}
+
+.table-container {
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+    border: 1px solid #e5e7eb;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+thead th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f3f4f6;
+    cursor: pointer;
+}
+
+.availability-tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.available {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.unavailable {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.action-links {
+    position: relative;
+    z-index: 1;
+}
+
+.action-links a {
+    position: relative;
+    z-index: 2;
+    margin-right: 10px;
+    color: #3B82F6;
+    text-decoration: none;
+}
+
+.action-links a:hover {
+    text-decoration: underline;
+}
+
+.action-links .delete-btn {
+    color: #EF4444;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.pagination-controls button {
+    padding: 8px 15px;
+}
+
+.pagination-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-controls span {
+    font-size: 0.9em;
+} 

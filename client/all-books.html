@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Books - BookWise</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all-books-specific.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BookWise</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="all-books.html" class="active">Books</a>
+            <a href="authors.html">Authors</a>
+            <a href="genres.html">Genres</a>
+        </nav>
+        <div class="user-profile">
+            <img src="assets/default-avatar.png" alt="User Profile">
+        </div>
+    </header>
+
+    <main>
+        <div class="container page-container">
+            <div class="page-header">
+                <h1>All Books</h1>
+                <a href="add-book.html" class="btn btn-primary">Add Book</a>
+            </div>
+
+            <div class="filters-and-search">
+                <input type="search" id="bookSearchInput" placeholder="Search by title, author, or ISBN...">
+                <div class="filter-group">
+                    <select id="authorFilter">
+                        <option value="">All Authors</option>
+                    </select>
+                    <select id="genreFilter">
+                        <option value="">All Genres</option>
+                    </select>
+                    <select id="availabilityFilter">
+                        <option value="">Any Availability</option>
+                        <option value="true">Available</option>
+                        <option value="false">Unavailable</option>
+                    </select>
+                </div>
+                <div class="sort-group">
+                    <label for="sortBy">Sort by:</label>
+                    <select id="sortBy">
+                        <option value="createdAt">Date Added (Newest)</option>
+                        <option value="title">Title</option>
+                        <option value="publicationYear">Publication Year</option>
+                    </select>
+                    <select id="sortOrder">
+                        <option value="desc">Descending</option>
+                        <option value="asc">Ascending</option>
+                    </select>
+                    <button id="applyFiltersBtn" class="btn">Apply</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>ISBN</th>
+                            <th>Genre</th>
+                            <th>Pub. Year</th>
+                            <th>Availability</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="booksTableBody">
+                        <tr><td colspan="7" style="text-align:center;">Loading books...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination-controls">
+                <button id="prevPageBtn" disabled>&laquo; Previous</button>
+                <span id="pageInfo">Page 1 of 1</span>
+                <button id="nextPageBtn" disabled>Next &raquo;</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 BookWise. All rights reserved.
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/allBooks.js"></script>
+</body>
+</html> 

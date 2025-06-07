@@ -12,8 +12,9 @@ const BookSchema = new mongoose.Schema({
         ref: "Genre"
     }, 
     publicationYear: Number,
+    description: String,
     availability: {type: Boolean, default: true}
-})
+},  {timestamps: true})
 
 const Book = mongoose.model("Book", BookSchema)
 
