@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Genre - BookWise</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form-page.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BookWise</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="all-books.html">Books</a>
+            <a href="authors.html">Authors</a>
+            <a href="genres.html" class="active">Genres</a>
+        </nav>
+        <div class="user-profile">
+            <img src="assets/default-avatar.png" alt="User Profile">
+        </div>
+    </header>
+
+    <main>
+        <div class="container form-container">
+            <div class="page-header">
+                <h1 id="pageTitle">Add New Genre</h1>
+            </div>
+
+            <form id="genreForm">
+                <input type="hidden" id="genreId" name="genreId">
+
+                <div class="form-group">
+                    <label for="name">Genre Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g., Science Fiction" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description (Optional)</label>
+                    <textarea id="description" name="description" rows="5" placeholder="A short description of the genre..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Save Genre</button>
+                </div>
+                <div id="formMessage" class="form-message" style="margin-top: 15px;"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 BookWise. All rights reserved.
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/genreForm.js"></script>
+</body>
+</html> 

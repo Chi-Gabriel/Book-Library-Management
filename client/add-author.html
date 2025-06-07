@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Author - BookWise</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form-page.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BookWise</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="all-books.html">Books</a>
+            <a href="authors.html" class="active">Authors</a>
+            <a href="genres.html">Genres</a>
+        </nav>
+        <div class="user-profile">
+            <img src="assets/default-avatar.png" alt="User Profile">
+        </div>
+    </header>
+
+    <main>
+        <div class="container form-container">
+            <div class="page-header">
+                <h1 id="pageTitle">Add New Author</h1>
+            </div>
+
+            <form id="authorForm">
+                <input type="hidden" id="authorId" name="authorId">
+
+                <div class="form-group">
+                    <label for="name">Author Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g., Jane Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Biography (Optional)</label>
+                    <textarea id="bio" name="bio" rows="5" placeholder="A short biography of the author..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Save Author</button>
+                </div>
+                <div id="formMessage" class="form-message" style="margin-top: 15px;"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 BookWise. All rights reserved.
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/authorForm.js"></script>
+</body>
+</html> 

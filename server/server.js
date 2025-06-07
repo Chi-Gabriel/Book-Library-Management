@@ -7,6 +7,7 @@ import connectMongoDB from "./db/connectMongoDB.js"
 import bookRoutes from "./Routes/book.routes.js"
 import authorRoutes from "./Routes/author.routes.js"
 import genreRoutes from "./Routes/genre.routes.js"
+import statsRoutes from "./Routes/stats.routes.js";
 
 dotenv.config()
 
@@ -20,6 +21,8 @@ app.use(express.urlencoded({ extended: true}))
 app.use("/api/books", bookRoutes)
 app.use("/api/authors", authorRoutes)
 app.use("/api/genres", genreRoutes)
+app.use("/api/stats", statsRoutes)
+
 
 
 app.listen(port, () => {
